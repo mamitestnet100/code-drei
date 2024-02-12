@@ -1,0 +1,23 @@
+# oyun.py
+import random
+
+def oyun():
+    print("Sayı tahmin oyununa hoş geldiniz!")
+    hedef_sayi = random.randint(1, 100)  # 1 ile 100 arasında rastgele bir sayı seçin
+    tahmin_hakki = 5
+
+    while tahmin_hakki > 0:
+        tahmin = int(input("Tahmininizi girin (1-100): "))
+
+        if tahmin == hedef_sayi:
+            print("Tebrikler! Doğru tahmin ettiniz.")
+            break
+        elif tahmin < hedef_sayi:
+            print("Daha büyük bir sayı deneyin.")
+        else:
+            print("Daha küçük bir sayı deneyin.")
+
+        tahmin_hakki -= 1
+
+    if tahmin_hakki == 0:
+        print(f"Tahmin hakkınız bitti. Hedef sa
